@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+    /* colour */
+    --color-primary : #e91e63;
+    --color-secondary : #c84c69;
+    --color-tertiary : #D4af37;
+    --color-outline : #333333 ;
+
+    /* fonts */
+    --font-heading :  "Noto Serif", serif;
+    --font-para : "Noto Serif", serif;
+}
+
+@layer components {
+
+}
