@@ -6,7 +6,7 @@ import About from "./About";
 
 function Home() {
   return (
-    <main className="max-w-7xl mx-auto px-4">
+    <main className="">
 
       {/* HERO SECTION */}
       <section className="grid md:grid-cols-2 gap-6 items-center py-6">
