@@ -1,17 +1,17 @@
+import { memo, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { services } from "../utils/Services";
 import { ServiceCard } from "./ServiceCard";
-import { memo } from "react";
 
-const Services = () => {
+function Services() {
   const navigate = useNavigate();
 
-  const handleNavigate = (id) => {
+  const handleNavigate = useCallback((id) => {
     navigate(`/services/${id}`);
-  };
+  }, [navigate]);
 
   return (
-    <div className="services font-heading">
+    <section className="services font-heading px-4 py-8">
 
       {/* Title */}
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
@@ -20,12 +20,23 @@ const Services = () => {
 
       {/* Cards */}
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {services.map((cat) => (
-          <ServiceCard key={cat.id} cat={cat} onNavigate={handleNavigate} />
-        ))}
+        {services?.length > 0 ? (
+          services.map((cat) => (
+            <ServiceCard
+              key={cat.id}
+              cat={cat}
+              onNavigate={handleNavigate}
+            />
+          ))
+        ) : (
+          <p className="text-center col-span-full text-gray-500">
+            No services available right now.
+          </p>
+        )}
       </div>
-    </div>
-  );
-};
 
-export default Services;
+    </section>
+  );
+}
+
+export default memo(Services);

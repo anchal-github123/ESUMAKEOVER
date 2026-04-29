@@ -1,24 +1,41 @@
-import { memo } from "react";
-export const ServiceCard = memo(({ cat, onNavigate }) => {
+import { memo, useCallback } from "react";
+
+export const ServiceCard = memo(function ServiceCard({ cat, onNavigate }) {
+
+  const handleNavigate = useCallback(() => {
+    onNavigate(cat.id);
+  }, [onNavigate, cat.id]);
+
+  const handleButtonClick = useCallback((e) => {
+    e.stopPropagation();
+    onNavigate(cat.id);
+  }, [onNavigate, cat.id]);
+
   return (
-    <div
-      className="group rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-xl hover:-translate-y-1 transition duration-300 cursor-pointer"
-      onClick={() => onNavigate(cat.id)}
+    <article
+      className="group rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-xl hover:-translate-y-1 transition duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary"
+      onClick={handleNavigate}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") handleNavigate();
+      }}
     >
       {/* Image */}
       <div className="overflow-hidden relative">
         <img
           src={cat.image}
-          alt={cat.category}
+          alt={`${cat.category} service`}
           loading="lazy"
+          decoding="async"
           className="h-64 w-full object-cover bg-gray-100 group-hover:scale-110 transition duration-500"
           onError={(e) => {
-            e.target.src = "/fallback.jpg"; // optional fallback image
+            e.currentTarget.src = "/fallback.jpg";
           }}
         />
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition"></div>
+        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition" />
       </div>
 
       {/* Content */}
@@ -28,15 +45,12 @@ export const ServiceCard = memo(({ cat, onNavigate }) => {
         </h2>
 
         <button
-          onClick={(e) => {
-            e.stopPropagation();
-            onNavigate(cat.id);
-          }}
-          className="w-full flex items-center justify-center gap-2 bg-primary hover:bg-tertiary text-white py-2 rounded-lg text-lg font-medium transition"
+          onClick={handleButtonClick}
+          className="w-full flex items-center justify-center gap-2 bg-primary hover:bg-tertiary text-white py-2 rounded-lg text-base font-medium transition focus:outline-none focus:ring-2 focus:ring-primary"
         >
           View Services →
         </button>
       </div>
-    </div>
+    </article>
   );
 });
