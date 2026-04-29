@@ -1,6 +1,7 @@
 import { memo, useMemo, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { services } from "../utils/Services";
+import { ServiceItem } from "./ServiceItem";
 
 function ServiceDetails() {
   const { id } = useParams();
