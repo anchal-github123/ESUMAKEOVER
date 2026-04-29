@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
 import Header from "../components/Navbar/Header"
-import Footer from "../components/footer"
+import Footer from "../components/Footer"
 import MobileScreenNav from "../components/Navbar/MobileScreenNav"
 import ScrollTop from "../components/ScrollTop"
 export default function Layout() {
