@@ -43,10 +43,13 @@ export const ServiceItem = memo(({ service }) => {
             ))}
           </div>
         )}
+  <a
+  href="tel:+916372294113"
+  className="flex justify-center items-center w-full px-4 py-3 mt-2 mb-3 bg-primary hover:bg-tertiary text-white rounded-3xl md:text-xl"
+>
+   Call Now
+</a>
 
-        <button className="w-full border border-pink-500 text-primary py-3 rounded-full font-semibold hover:bg-pink-500 hover:text-white transition">
-          BOOK NOW
-        </button>
       </div>
     </div>
   );
