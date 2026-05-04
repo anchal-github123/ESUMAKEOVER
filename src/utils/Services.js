@@ -6,10 +6,10 @@ import skincare from "../assets/SkinCare.webp";
 
 // Hair services
 import hairwash from "../assets/Hairwash.webp";
-import haircut from "../assets/Hair.webp"; // no Haircut.webp → using Hair.webp
+import haircut from "../assets/HairCut.webp"; 
 import hairstyling from "../assets/Hair Styling.webp";
 import hairspa from "../assets/HairSpa.webp";
-import hairstraightening from "../assets/Hair Straightening.webp";
+import hairstraightening from "../assets/Hair Straightening (1).webp";
 import hairsmoothening from "../assets/Hair Smoothening.webp";
 import botox from "../assets/BOTOX.webp";
 import keratin from "../assets/Keratin treatment.webp";
@@ -28,7 +28,7 @@ import manicure from "../assets/Manicure.webp";
 import nailart from "../assets/Nailart.webp";
 import earpiercing from "../assets/Ear Piercings.webp";
 import earlobe from "../assets/Ear lobe Repair.jpg";
-import hydrafacial from "../assets/Hydra facial.jpg";
+import hydrafacial from "../assets/Hydra facial1.webp";
 
 export const services = [
   {
@@ -122,32 +122,32 @@ export const services = [
       {
         name: "Basic",
         price: 5000,
-        includes: ["Makeup", "Eyelash", "Eye Lenses"]
+        includes: ["Makeup", "Eyelash", "Eye Lenses" ,"Draping","Jewellery setting",]
       },
       {
         name: "HD",
         price: 8000,
-        includes: ["Makeup", "Eyelash", "Eye Lenses"]
+        includes: ["Makeup", "Eyelash", "Eye Lenses"  ,"Draping","Jewellery setting",]
       },
       {
         name: "HD Ultra",
         price: 10000,
-        includes: ["Makeup", "Eyelash", "Eye Lenses"]
+        includes: ["Makeup", "Eyelash", "Eye Lenses"  ,"Draping","Jewellery setting",]
       },
       {
         name: "Sweat Proof",
         price: 12000,
-        includes: ["Makeup", "Eyelash", "Eye Lenses"]
+        includes: ["Makeup", "Eyelash", "Eye Lenses"  ,"Draping","Jewellery setting",]
       },
       {
         name: "Airbrush makeup",
         price: 15000,
-        includes: ["Makeup", "Eyelash", "Eye Lenses", "Hair Extension"]
+        includes: ["Makeup", "Eyelash", "Eye Lenses", "Hair Extension"  ,"Draping","Jewellery setting",]
       },
       {
         name: "Luxury",
         price: 17000,
-        includes: ["Makeup", "Eyelash", "Eye Lenses", "Hair Extension"]
+        includes: ["Makeup", "Eyelash", "Eye Lenses", "Hair Extension"  ,"Draping","Jewellery setting",]
       }
     ]
   },
@@ -181,7 +181,7 @@ export const services = [
   image: hair,
   services: [
     { name: "Hairwash", image: hairwash },
-    { name: "Haircut", image: hair },
+    { name: "Haircut", image: haircut },
     { name: "Hair Styling", image: hairstyling },
     { name: "HairSpa", image: hairspa },
     { name: "Hair Straightening", image: hairstraightening },
