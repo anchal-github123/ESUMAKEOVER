@@ -202,13 +202,14 @@ export const services = [
     { name: "Bleach", image: bleach },
     { name: "DTan", image: dtan },
     { name: "Facial", image: facial },
+    { name: "Hydra facial", image: hydrafacial },
     { name: "Waxing", image: waxing },
     { name: "Pedicure", image: pedicure },
     { name: "Manicure", image: manicure },
     { name: "Nailart", image: nailart },
     { name: "Ear Piercings", image: earpiercing },
     { name: "Ear lobe Repair Treatment", image: earlobe },
-    { name: "Hydra facial", image: hydrafacial }
+  
   ]
 }
 ];
