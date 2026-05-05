@@ -1,3 +1,4 @@
+import qrcode from "../assets/reviewqrpro-qr.png"
 export default function Contact() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-10">
@@ -107,7 +108,15 @@ export default function Contact() {
          </iframe>
         </div>
 
+                        {/* Facebook */}
+     <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col justify-center items-center">
+     <h2 className="text-xl font-semibold mb-2">Review</h2>
+          <img src={qrcode} alt="QR code"></img>
       </div>
+
+      </div>
+
+    
     </div>
   );
 }
